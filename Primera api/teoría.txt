@@ -1,0 +1,44 @@
+EXPRESS
+no sé que hace, se descarga con npm i express
+Se define en const al principio del js
+se usa para definir la app
+
+Imaginemos que desde un celu queremos pedir un dato.
+Req es el pedido 
+Res es la respuesta.
+
+Para matar el proceso, escribir ctrl c en la terminañ
+
+Los endpoints es todo lo que va después de la barra y yo lo defino en la función get
+
+Ejercicio
+Armar nuestro propio servidor con una lista de tareas:
+- Id
+- nombre
+- booleano
+el endpoint va a ser /api/todos
+
+CORS
+Es una validación que hace los navegadores al momento de pedir un dato de api para que solo me puedan hacer pedidos que yo conozco. 
+Siempre tenés que hacer pedido desde un mismo dominio.
+Esto se puede modificar, deshabilitar o dejar activo.
+Se configura con una const "cors" que lo llame, y un app.use(cors()), después de definir la app
+
+Se descarga en la carpeta npm i cors
+
+Es una validación cuando son datos son sensibles.
+
+.send o .json
+Cuando sé que devuelvo un json, puedo hacer .json en vez de .send
+
+
+Método delete
+.delete('endpoint/dirección del endpoint/id del elemento que quiero borrar', )
+Como el id va a ir cambiando, le ponemos : y un parámetro. Suele ser id porque es la propiedad que vamos a usar, pero no hace falta que sea así.
+se hace req.params.id 
+Params es un objeto que guarda el Express, y "id" es el nombre del parámetro.
+Conviene hacer parse int porque el id va a ser string, no número.
+
+Siempre tiene que haber una respuesta.
+
+FIlter no es destructivo, sino que te devuelve un nuevo array.
